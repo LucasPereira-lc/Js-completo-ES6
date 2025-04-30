@@ -38,3 +38,51 @@ addEventListener('click', function() {
 // A função possui dois argumentos
 // Primeiro é a string 'click'
 // Segundo é uma função anônima
+
+function imc(peso, altura) {
+  const imc = peso / (altura ** 2);
+  console.log(imc);
+}
+
+imc(60, 1.80); // retorna o imc
+console.log(imc(40, 1.80)); // retorna o imc e undefined
+
+function terceiraIdade(idade) {
+  if (typeof idade !== 'number') {
+    return 'Informe a sua idade!'
+  }
+  else if (idade >= 60) {
+    return true
+  }else {
+    return false
+  }
+}
+console.log(terceiraIdade('oi'))
+
+function faltaVisitar(paisesVisitados) {
+  var totalPaises = 193
+  return `Falta visitar ${totalPaises - paisesVisitados} paises`
+}
+
+var profissao = 'Designer';
+
+function dados() {
+  var nome = 'André';
+  var idade = 28;
+  function outrosDados() {
+    var endereco = 'Rio de Janeiro';
+    var idade = 29;
+    return `${nome}, ${idade}, ${endereco}, ${profissao}`;
+  }
+  return outrosDados();
+}
+
+dados(); // Retorna 'André, 29, Rio de Janeiro, Designer'
+// outrosDados(); // retorna um erro
+
+imc(80, 1.80); // imc aparece no console
+function imc(peso, altura) {
+  const imc = peso / (altura ** 2);
+  console.log(imc);
+}
+
