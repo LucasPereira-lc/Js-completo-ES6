@@ -1,63 +1,50 @@
-var possuiGraduacao = true
-var posGraduacao = false
-
-if (posGraduacao) {
-  console.log('Possui pós-graduação e graduação')
-  var x = 10
-}else if (possuiGraduacao){
-  console.log('Possui apenas graduação')
+// Verifique se a sua idade é maior do que a de algum parente
+// Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
+var minhaIdade = 18
+var idadePrimo = 32
+var teste = (minhaIdade > idadePrimo)
+if (teste) {
+  console.log('Sim, é maior')
+}else if (minhaIdade === idadePrimo) {
+  console.log('É igual')
 }else {
-  console.log('Não possui graduação e nem pós-graduação')
-}
-console.log(x)
-
-// Falsy
-/* if(false)
-  if(0) // ou -0
-  if(NaN)
-  if(null)
-  if(undefined)
-  if('') // ou "" ou `` */
-  
-// Truthy
-/* if(true)
-  if(1)
-  if(' ')
-  if('andre')
-  if(-5)
-  if({}) */
-
-var nome = ''
-if (nome) {
-  console.log(nome)
-}else {
-  console.log('Nome não existe')
+  console.log('Não, é menor')
 }
 
-if (!possuiGraduacao) {
-  console.log('Não possui graduação prt2')
+// Qual valor é retornado na seguinte expressão?
+var expressao = (5 - 2) && (5 - ' ') && (5 - 2);
+// 3
+console.log(expressao)
+
+// Verifique se as seguintes variáveis são Truthy ou Falsy
+var nome = 'Andre'; //true
+var idade = 28; //true
+var possuiDoutorado = false; //false
+var empregoFuturo; //false
+var dinheiroNaConta = 0; //false
+console.log(!!dinheiroNaConta)
+
+// Compare o total de habitantes do Brasil com China (valor em milhões)
+var brasil = 207;
+var china = 1340;
+
+if (brasil > china) {
+  console.log('A população do Brasil é maior que a da china.')
+}else if (china > brasil) {
+  console.log('A população da China é maior que a do Brasil.')
 }else {
-  console.log ('Possui graduação prt2')
+  console.log('A população do Brasil e da China são iguais.')
+}
+// O que irá aparecer no console?
+if(('Gato' === 'gato') && (5 > 2)) {
+  console.log('Verdadeiro');
+} else {
+  console.log('Falso');
 }
 
-/* Truthy
-if(!true) // false
-if(!1) // false
-if(!'') // true
-if(!undefined) // true
-if(!!' ') // true
-if(!!'') // false */
-
-10 > 5; // true
-5 > 10; // false
-20 < 10; // false
-10 <= 10 // true
-10 >= 11 // false
-
-10 == '10'; // true
-10 == 10; // true
-10 === '10'; // false
-10 === 10 // true
-10 != 15 // true
-10 != '10' // false
-10 !== '10' // true
+// O que irá aparecer no console?
+if(('Gato' === 'gato') || (5 > 2)) {
+  console.log('Gato' && 'Cão');
+} else {
+  console.log('Falso');
+}
