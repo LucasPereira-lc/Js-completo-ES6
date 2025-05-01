@@ -1,46 +1,37 @@
-var pessoa = {
+// Crie um objeto com os seus dados pessoais
+// Deve possui pelo menos duas propriedades nome e sobrenome
+var meusDados = {
   nome: 'Lucas',
+  sobrenome: 'Pereira',
   idade: 18,
-  profissao: 'Programador',
-  possuiFaculdade: false,
-}
-console.log(pessoa.profissao)
-
-var quadrado = {
-  lados: 4,
-  area: function(lado) {
-    return lado * lado
-  },
-  perimetro: function(lado) {
-    return this.lados * lado
-  },
-}
-console.log(quadrado.area(5))
-console.log(quadrado.perimetro(5))
-
-Math.PI; // 3.14
-Math.random(); // número aleatório
-
-var pi = Math.PI;
-console.log(pi); // 3.14
-
-/* var menu = {
-  width: 800,
-  height: 100,
-  backgroundColor: '#84E',
-}
-menu.color = 'Blue'
-menu.backgroundColor = '#000'
-var bg = menu.backgroundColor */
-
-var menu = {
-  width: 800,
-  height: 50,
-  metadeHeight() {
-    return this.height / 2 // 25
-  },
 }
 
-menu.hasOwnProperty('color') // false
-menu.hasOwnProperty('width') // true
-'Lucas'.length // 5
+// Crie um método no objeto anterior, que mostre o seu nome completo
+meusDados.nomeCompleto = function() {
+  return this.nome + ' ' + this.sobrenome
+}
+
+// Modifique o valor da propriedade preco para 3000
+var carro = {
+  preco: 1000,
+  portas: 4,
+  marca: 'Audi',
+}
+carro.preco = 3000
+console.log(carro)
+
+// Crie um objeto de um cachorro que represente um labrador,
+// preto com 10 anos, que late ao ver um homem
+var cachorro = {
+  raca: 'labrador',
+  cor: 'preto',
+  idade: 10,
+  latir(pessoa) {
+    if (pessoa === 'homem') {
+      return 'Latir'
+    }else {
+      return 'Nada'
+    }
+  }
+}
+console.log(cachorro)
