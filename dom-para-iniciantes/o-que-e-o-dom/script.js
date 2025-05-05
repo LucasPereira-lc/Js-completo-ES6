@@ -1,17 +1,13 @@
-// window.alert('Isso mesmo')
+// Retorne o url da página atual utilizando o objeto window
+const url = window.location.href
+console.log(url)
 
-const href = window.location.href
-console.log(href)
-if(href === 'http://127.0.0.1:5500/dom-para-iniciantes/o-que-e-o-dom/index.html') {
-  console.log('É igual')
-}
+// Seleciona o primeiro elemento da página que
+// possua a classe ativo
+elementoAtivo = document.querySelector('.ativo') // 'querySelector' seleciona o primeiro da página. Já o 'querySelectorAll' seleciona todos.
 
-const h1selecionado = document.querySelector('h1')
-// h1selecionado.innerText = 'Mudei o Título'
-h1Classes = h1selecionado.classList
+// Retorne a linguagem do navegador
+console.log(navigator.language)
 
-function callbackh1() {
-  console.log('Clicou em', h1selecionado)
-}
-
-h1selecionado.addEventListener('click', callbackh1)
+// Retorne a largura da janela 
+console.log(window.innerWidth)
