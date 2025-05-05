@@ -1,31 +1,28 @@
-function mostrarCarro() {
-  var carro = 'Fusca';
-  console.log(carro);
+// Por qual motivo o código abaixo retorna com erros?
+{
+  var cor = 'preto';
+  const marca = 'Fiat';
+  let portas = 4;
+}
+// console.log(var, marca, portas); // pq const e let não funcionam fora do bloo  // 'var' nãp é o nome de uma variável
+
+// Como corrigir o erro abaixo?
+const dois = 2;  // colocar a variável fora dos dois blocos
+function somarDois(x) {
+  return x + dois;
+}
+function dividirDois(x) {
+  return x / dois;
+}
+somarDois(4);
+dividirDois(6);
+
+// O que fazer para total retornar 500?
+const numero = 50; // Transformar 'var' em 'const', pq é melhor e essa variável não ira mudar o valor
+
+for(let numero = 0; numero < 10; numero++) {
+  console.log(numero); // Usar 'let' em vez de 'var', pois let não vaza do bloco
 }
 
-mostrarCarro(); // Fusca no console
-// console.log(carro); // Erro, carro is not defined
-
-if(true) {
-  var carro = 'Fusca';
-  console.log(carro); // Variáveis criadas com var, vazam o bloco.
-}
-console.log(carro); // Carro
-
-for(var i = 0; i < 10; i++) {
-  console.log(`Número ${i}`); // var está vazando do bloco
-}
-console.log(i); // 10 // Se usasse-mos 'let' em vez de 'var' essa linha daria erro
-
-const mes = 'Dezembro';
-// mes = 'Janeiro'; // erro, tentou modificar o valor
-// const semana; // erro, declarou sem valor
-
-const data = {
-  dia: 4,
-  mes: 'maio',
-  ano: 2026,
-}
-
-data.dia = 29; // Funciona
-// data = 'Janeiro'; // erro
+const total = 10 * numero;
+console.log(total);
