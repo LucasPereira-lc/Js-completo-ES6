@@ -1,33 +1,19 @@
-const animais = document.getElementById('animais')
-console.log(animais)
+// Retorne no console todas as imagens do site
+const imgSite = document.querySelectorAll('img')
+console.log(imgSite)
 
-const gridSection = document.getElementsByClassName('grid-section')
-console.log(gridSection)
+// Retorne no console apenas as imagens que começaram com a palavra imagem
+const animaisSite = document.querySelectorAll('img[src^="img/imagem"]')
+console.log(animaisSite)
 
-const primeiraLi = document.querySelector('li')
-console.log(primeiraLi) // retorna a primeira li do código
+// Selecione todos os links internos (onde o href começa com #)
+const linksInternos = document.querySelectorAll('[href^="#"')
+console.log(linksInternos)
 
-const primeiraUl = document.querySelector('ul')
-console.log(primeiraUl) // retorna a primeira ul do código
+// Selecione o primeiro h2 dentro de .animais-descricao
+const primeiroH2 = document.querySelector('.animais-descricao h2')
+console.log(primeiroH2)
 
-const linkInterno = document.querySelector('[href^="#"')
-console.log(linkInterno) // retorna o primeiro link interno do código
-
-const animaisImg = document.querySelectorAll('.animais img')
-console.log(animaisImg[2])
-
-//const titulo = document.querySelector('.titulo');
-const gridSectionHTML = document.getElementsByClassName('grid-section')
-const gridSectionNode = document.querySelectorAll('.grid-section')
-
-//titulo.classList.add('grid-section');
-
-console.log(gridSectionNode); // 3 itens
-console.log(gridSectionHTML); // 4 itens
-
-gridSectionNode.forEach(function(item, index){
-  console.log(index)
-})
-
-const arrayGrid = Array.from(gridSectionHTML)
-// arrayGrid.pop() remove o último item da array e retorna ele
+// Selecione o último p do site
+const paragrafos = document.querySelectorAll('p')
+console.log(paragrafos[paragrafos.length - 1])
