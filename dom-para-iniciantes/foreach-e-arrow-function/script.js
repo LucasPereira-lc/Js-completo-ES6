@@ -1,23 +1,22 @@
-/* const imgs = document.querySelectorAll('img')
+// Mostre no console cada parágrado do site
+const paragrafos = document.querySelectorAll('p')
+console.log(paragrafos)
 
-let i = 0
-imgs.forEach(function(item, index, array){ // sempre assim: 1¨ o item, 2¨ o index e 3¨ o array
-  console.log(item, index, array)
-}) */
+// Mostre o texto dos parágrafos no console
+ paragrafos.forEach((item) => console.log(item.innerText))
 
-// const titulos = document.getElementsByClassName('titulo')
-// const titulosArray = Array.from(titulos)
+// Como corrigir os erros abaixo:
 
-/* titulosArray.forEach(function(item){
-   console.log(item)
-}) */
+const imgs = document.querySelectorAll('img');
 
-const imgs = document.querySelectorAll('img')
-/*
+imgs.forEach((item, index) => {
+  console.log(item, index);
+});
 
-imgs.forEach(item => { 
-  console.log(item)
-}) */
+let i = 0;
+imgs.forEach(() => {
+  console.log(i++);
+});
 
-let i = 0
-imgs.forEach((item) => console.log(i++))
+imgs.forEach(() => console.log(i++));
+
