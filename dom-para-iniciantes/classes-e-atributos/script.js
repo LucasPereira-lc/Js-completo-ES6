@@ -1,31 +1,10 @@
-const menu = document.querySelector('.menu')
+// Adicione a classe ativo a todos os itens do menu
+const menu = document.querySelector('.menu li')
+menu.classList.
 
-menu.classList.add('ativo') // adiciona a classe 
-menu.classList.remove('azul') // remove a classe
-menu.classList.toggle('azul') // adiciona/remove a classe
+// Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
 
-if (menu.classList.contains('azul')) { 
-  menu.classList.add('possui-azul')
-}else {
-  menu.classList.add('nao-possui-azul')
+// Verifique se as imagens possuem o atributo alt
 
-}
+// Modifique o href do link externo no menu
 
-// console.log(menu.classList)
-
-const animais = document.querySelector('.animais')
-console.log(animais.attributes['data-texto'])
-
-const img = document.querySelector('img')
-
-console.log(img.getAttribute('alt')) // valor do src
-console.log(img.setAttribute('alt', 'Texto Alternativo')) // muda o alt
-console.log(img.hasAttribute('alt')) // true / false
-console.log(img.removeAttribute('alt')) // remove o alt
-
-const carro = {
-  portas: 4,
-  andar(km) {
-    console.log(`Andou ${km}`)
-  }
-}
