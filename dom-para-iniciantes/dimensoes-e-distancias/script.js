@@ -1,30 +1,32 @@
-const listaAnimais = document.querySelector('.animais-lista')
+// Verifique a distância da primeira imagem
+// em relação ao topo da página
+const img = document.querySelector('img')
+console.log(img.offsetTop)
 
-const height = listaAnimais.clientHeight
-const distanciatop = listaAnimais.offsetTop
-console.log(distanciatop)
+// Retorne a soma da largura de todas as imagens
+const imgs = document.querySelectorAll('img')
+let soma = 0
+imgs.forEach(function(img){
+  soma += img.offsetWidth
+})
+console.log(soma)
 
-const primeiroh2 = document.querySelector('h2')
-h2left = primeiroh2.offsetLeft
+// Verifique se os links da página possuem
+// o mínimo recomendado para telas utilizadas
+// com o dedo. (48px/48px de acordo com o google)
+const links = document.querySelectorAll('a')
+links.forEach(function(link){
+  if (link.offsetHeight >= 48 && link.offsetWidth >= 48) {
+  console.log(link, 'Tamanho recomendado')
+  }else {
+  console.log(link, 'Tamanho não recomendado')
+  }
+}) 
 
-const rect = primeiroh2.getBoundingClientRect()
-console.log(rect)
-console.log(
-window.innerWidth, // width do janela
-window.outerWidth, // soma dev tools também
-window.innerHeight, // height do janela
-window.outerHeight, // soma a barra de endereço
-window.pageYOffset, // distância total do scroll vertical
-window.pageXOffset // distância total do scroll horizontal
-)
-
-if(rect.top < 0) {
-  console.log('Passou do elemento')
-}
-
-const small = window.matchMedia('(max-width: 600px)').matches
-if (small) {
-  console.log('Tela menor que 600px')
-}else {
-  console.log('Tela maior que 600px')
+// Se o browser for menor que 720px,
+// adicione a classe menu-mobile ao menu
+const menu = document.querySelector('.menu')
+const browser = window.matchMedia('(max-width: 720px)').matches
+if (browser) {
+  menu.classList.add('menu-mobile')
 }
