@@ -7,13 +7,14 @@ copy.appendChild(cloneMenu)
 
 // Selecione o primeiro DT da dl de Faq
 const faq = document.querySelector('.faq')
-const dl = faq.querySelector('dl')
-const dt = dl.querySelector('dt')
-console.log(dt)
+const primeiroDt = faq.querySelector('dt')
+
+console.log(primeiroDt)
 
 // Selecione o DD referente ao primeiro DT
-const dd = dt.nextElementSibling
-console.log(dd)
+const primeiroDd = primeiroDt.nextElementSibling
+
+console.log(primeiroDd)
 
 // Substitua o conteúdo html de .faq pelo de .animais
 const animais = document.querySelector('.animais')
