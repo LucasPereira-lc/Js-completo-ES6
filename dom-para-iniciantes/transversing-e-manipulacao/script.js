@@ -12,9 +12,9 @@ const primeiroDt = faq.querySelector('dt')
 console.log(primeiroDt)
 
 // Selecione o DD referente ao primeiro DT
-const primeiroDD = primeiroDt.nextElementSibling
+const próximoDD = primeiroDt.nextElementSibling
 
-console.log(primeiroDD)
+console.log(próximoDD)
 
 // Substitua o conteúdo html de .faq pelo de .animais
 const animais = document.querySelector('.animais')
