@@ -4,10 +4,13 @@ console.log(url)
 
 // Seleciona o primeiro elemento da página que
 // possua a classe ativo
-elementoAtivo = document.querySelector('.ativo') // 'querySelector' seleciona o primeiro da página. Já o 'querySelectorAll' seleciona todos.
+const ativo = document.querySelector('.ativo')
+console.log(ativo)
 
 // Retorne a linguagem do navegador
-console.log(navigator.language)
+const linguagem = window.navigator.languages
+console.log(linguagem)
 
 // Retorne a largura da janela 
-console.log(window.innerWidth)
+const largura = window.innerWidth 
+console.log(largura)
