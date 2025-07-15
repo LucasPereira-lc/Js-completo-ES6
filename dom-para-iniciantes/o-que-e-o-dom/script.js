@@ -8,7 +8,7 @@ const ativo = document.querySelector('.ativo')
 console.log(ativo)
 
 // Retorne a linguagem do navegador
-const linguagem = window.navigator.languages
+const linguagem = window.navigator.language
 console.log(linguagem)
 
 // Retorne a largura da janela 
