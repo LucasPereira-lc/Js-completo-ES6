@@ -1,7 +1,22 @@
-function Carro(marcaAtribuida, precoAtribuido) {
-  this.marca = marcaAtribuida
-  this.preco = precoAtribuido
+// const Dom = {
+//   seletor: 'li',
+//   element() {
+//     return document.querySelector(this.seletor)
+//   },
+//   ativar() {
+//     this.element().classList.add('ativo')
+//   }
+// }
+
+function Dom(seletor) {
+  this.element = function() {
+    return document.querySelector(seletor)
+  }
+  this.ativar = function() {
+    this.element().classList.add('ativo')
+  }
 }
 
-const honda = new Carro('Honda', 4000)
-const fiat = new Carro('Fiat', 3000)
+const li = new Dom('li')
+const ul = new Dom('ul')
+const lastLi = new Dom('li:last-child')
