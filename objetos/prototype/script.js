@@ -17,3 +17,15 @@ console.log(lucas.prototype)
 // acesso ao this.nome
 // andre.andar();
 // andre.__proto__.andar();
+
+const pais = 'Brasil';
+const cidade = new String('Rio');
+
+pais.charAt(0); // B
+cidade.charAt(0); // R
+
+String.prototype;
+
+const lista = document.querySelectorAll('li')
+// Transforma em uma array
+const arrayLista = Array.prototype.slice.call(lista)
