@@ -1,43 +1,38 @@
-function Pessoa(nome, idade) {
+// Crie uma função construtora de Pessoas
+// Deve conter nome, sobrenome e idade
+// Crie um método no protótipo que retorne
+// o nome completo da pessoa
+function Pessoa(nome, sobrenome, idade) {
   this.nome = nome
+  this.sobrenome = sobrenome
   this.idade = idade
 }
+const lucas = new Pessoa('Lucas', 'Pereira', 18)
 
-Pessoa.prototype.andar = function() {
-  return this.nome + ' andou'
+
+Pessoa.prototype.nomeCompleto = function() {
+  return this.nome + ' ' + this.sobrenome
 }
 
-const lucas = new Pessoa('Lucas', 18)
 
-console.log(Pessoa.prototype)
-console.log(lucas.prototype)
+// Liste os métodos acessados por 
+// dados criados com NodeList,
+// HTMLCollection, Document
+Object.getOwnPropertyNames(NodeList.prototype)
+Object.getOwnPropertyNames(HTMLCollection.prototype)
+Object.getOwnPropertyNames(Document.prototype)
 
-// Acessam o mesmo método
-// mas __proto__ não terá
-// acesso ao this.nome
-// andre.andar();
-// andre.__proto__.andar();
 
-const pais = 'Brasil';
-const cidade = new String('Rio');
+// Liste os construtores dos dados abaixo
+const li = document.querySelector('li');
 
-pais.charAt(0); // B
-cidade.charAt(0); // R
+li; // HTMLLIElement
+li.click; // Function
+li.innerText; // String
+li.value; // Number
+li.hidden; // Boolean
+li.offsetLeft; // Number
+li.click(); // Undefined
 
-String.prototype;
-
-const lista = document.querySelectorAll('li')
-// Transforma em uma array
-const arrayLista = Array.prototype.slice.call(lista)
-
-// Retorna uma lista com os métodos / propriedades
-Object.getOwnPropertyNames(Array);
-Object.getOwnPropertyNames(Array.prototype);
-
-Carro // Object
-Carro.marca // String
-Carro.preco // Number
-Carro.acelerar // Function
-Carro.acelerar() // Boolean
-Carro.marca.charAt // Function
-Carro.marca.charAt(0) // String
+// Qual o construtor do dado abaixo:
+li.hidden.constructor.name; // String
