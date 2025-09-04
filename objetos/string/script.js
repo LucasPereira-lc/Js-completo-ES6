@@ -34,3 +34,11 @@ console.log(transacao1.slice(-2))
 const instrumento = 'Guitarra';
 
 console.log(fruta.lastIndexOf('a'))
+
+const preco = 'R$ 99,00'
+console.log(preco.padEnd(20,'.'))
+
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+// listaItens = listaItens.replace(/[ ]+/g, ', ')
+
+const arrayLista = listaItens.split(' ')
